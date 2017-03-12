@@ -8,7 +8,7 @@ dependencies:
     - sudo apt-get -q update -y
     - pip install -U pip
     - pip install notebook
-    - pip install py.test
+    - pip install pytest
     - pip install nbval
 
 test:
