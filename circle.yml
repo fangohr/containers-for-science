@@ -1,0 +1,17 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker info
+    - sudo apt-get -q update -y
+    - pip install -U pip
+    - pip install notebook
+    - pip install py.test
+    - pip install nbval
+
+test:
+  pre:
+  override:
+    - py.test -v -l -s --nbval .
