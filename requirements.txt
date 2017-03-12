@@ -1,3 +1,5 @@
 notebook
 pytest
 nbval
+bookbook
+pandocfilters
