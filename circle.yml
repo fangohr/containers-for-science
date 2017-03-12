@@ -14,4 +14,4 @@ dependencies:
 test:
   pre:
   override:
-    - py.test -v -l -s --nbval .
+    - py.test -v -l -s --nbval --current-env .
