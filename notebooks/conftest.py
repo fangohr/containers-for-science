@@ -18,7 +18,12 @@ def setup(request):
         """tear down function - called at end of test session"""
         print("Session fixture teardown")
 
-    command = ["echo", "session start up"]
+    # get list of images
+    status, output = subprocess.getstatusoutput("docker images -q")
+    assert status == 0, output
+    #command = ["echo", "session start up"]
+    command = ["docker", "rmi", "-f", output]
+
     command_proc = subprocess.Popen(command,
                                     #stdout=open(os.devnull),
                                     #stderr=open(os.devnull),
