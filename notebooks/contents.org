@@ -1,4 +1,4 @@
-- [ ] Introduction
+- [X] Introduction
 - [ ] More realistic example
   - demo non-persistence
   - mount directory
