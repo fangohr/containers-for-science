@@ -1,0 +1,13 @@
+- [ ] Introduction
+- [ ] More realistic example
+  - demo non-persistence
+  - mount directory
+  - open port
+- [ ] Jupyter notebook example
+- [ ] GUIs and X
+- [ ] Creating Containers
+  - Dockerfile
+  - images to base on
+
+- [ ] Using containers in Travis / Circle CI
+- [ ] Performance study
