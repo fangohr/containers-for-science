@@ -1,0 +1,173 @@
+* Old stuff
+fangohr@osiris:~$ sudo docker search fenics
+NAME                                 DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+fenicsproject/stable-ppa             Official FEniCS project Ubuntu PPA build. ...   1
+lzlarryli/dockerized-fenics-stable   See https://bitbucket.org/lzlarryli/docker...   0
+lzlarryli/dockerized-fenics-dev      See https://bitbucket.org/lzlarryli/docker...   0
+fenicsproject/development            Official FEniCS project development build....   0
+fenicsproject/stable-src             Official FEniCS project stable source buil...   0
+fangohr@osiris:~$ sudo docker pull fenicsproject/stable-ppa
+
+
+sudo docker pull fenicsproject/stable-ppa
+
+
+Then
+
+sudo docker run -i -t fenicsproject/stable-ppa /bin/bash
+cd /usr/share/dolfin/demo/documented/poisson/python
+python demo_poisson.py
+
+and it works!
+
+
+
+* Docker commands <2016-06-29 Wed>
+
+docker run -ti -v /Users/fangohr/Desktop:/mnt/test fangohr/fidimag-dev bash
+
+* Tidy up
+
+** Docker images
+
+docker images
+
+get only the ids
+
+docker images -q
+
+** Docker containers
+
+docker ps -a
+
+Or running containers
+
+docker ps
+
+Only ids:
+
+docker ps -q
+
+
+Delete images:
+
+docker rmi `docker images -q`
+
+Delete containers:
+
+docker rm `docker ps -a -q`
+
+
+* On Mac: which IP has my container
+
+docker-machine config
+
+or even better:
+
+docker-machine ip
+
+But we also need to expose the virtual machine with this IP to the
+host network. One option that worked (just now <2016-07-20 Wed 21:12>)
+is to go to virtual box to find the virtual machine that docker uses
+(name is 'default'), go to settings -> Network -> Adapter 2 ->
+host-only adapter. I tink I switch on 'promiscous mode' but now it
+seems to work with that deactivated.
+
+Also need to
+
+EXPOSE 80
+
+in Dockerfile, and map container port to host port with
+
+docker run -p 80:80 ....
+
+then connect to `docker-machine ip`:80
+
+Tested with Apache server.
+
+
+* How to install docker on Mac (<2016-07-12 Tue>)
+
+brew install Caskroom/cask/dockertoolbox
+
+* Stop docker virtual machine
+from https://docs.docker.com/machine/reference/stop/
+
+
+stop
+Usage: docker-machine stop [arg...]
+
+Gracefully Stop a machine
+
+Description:
+   Argument(s) are one or more machine names.
+For example:
+
+$ docker-machine ls
+
+NAME   ACTIVE   DRIVER       STATE     URL
+dev    *        virtualbox   Running   tcp://192.168.99.104:2376
+
+$ docker-machine stop dev
+$ docker-machine ls
+
+NAME   ACTIVE   DRIVER       STATE     URL
+dev    *        virtualbox   Stopped
+chat icon Feedback? Questions? Suggestions?
+Edit this page, file a ticket, or rate this page:
+ 0 0
+
+* Other useful commands
+ docker-machine --debug ls
+
+
+* re-create machine
+ # with 100GB size, with 8G RAM
+ docker-machine rm default
+ docker-machine create --driver virtualbox --virtualbox-disk-size 100000 --virtualbox-memory "8096" default
+
+* Set memory and cpus for container:
+
+docker-machine stop
+VBoxManage modifyvm default --cpus 2
+VBoxManage modifyvm default --memory 4096
+docker-machine start
+
+
+* Export docker image without docker hub
+
+docker save an image or docker export a container. This will output a tar file to standard output, so you will like to do something like docker save 'dockerizeit/agent' > dk.agent.lastest.tar. Then you can use docker load or docker import in a different host.
+
+http://stackoverflow.com/questions/24482822/how-to-share-my-docker-image-without-using-the-docker-hub
+
+See
+
+- save: https://docs.docker.com/engine/reference/commandline/save/
+- load: https://docs.docker.com/engine/reference/commandline/load/
+
+
+
+* Training
+** basic example
+- basic example, run cowsay in docker
+- basic example with mounting directory
+
+
+** Build container
+** Use container
+** Common use cases in building containers
+- add files
+- set environment variables
+- change working directory
+
+** exporting and importing containers
+** using dockerhub
+** exporting X
+
+* Sharing X
+- firefox example on linux:
+  http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/
+
+  [looks good, but not tested on OSX]
+
+- http://stackoverflow.com/questions/25281992/alternatives-to-ssh-x11-forwarding-for-docker-containers
