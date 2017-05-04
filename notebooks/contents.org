@@ -11,3 +11,7 @@
 
 - [ ] Using containers in Travis / Circle CI
 - [ ] Performance study
+
+- [ ] Introduce singularity
+- [ ] translate examples above into singularity
+- [ ] Motivate use of containers
