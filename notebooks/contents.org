@@ -1,11 +1,11 @@
 - [X] Introduction
-- [ ] More realistic example
-  - demo non-persistence
-  - mount directory
-  - open port
+- [-] More realistic example [2/3]
+  - [X] demo non-persistence
+  - [X] mount directory
+  - [ ] open port
 - [ ] Jupyter notebook example
 - [ ] GUIs and X
-- [ ] Creating Containers
+- [X] Creating Containers
   - Dockerfile
   - images to base on
 
