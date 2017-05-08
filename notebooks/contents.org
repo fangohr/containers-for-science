@@ -3,6 +3,12 @@
   - demo non-persistence
   - mount directory
   - open port
+- [ ] machine maintenance
+  - [ ] where are images?
+  - [ ] how to remove all images?
+- [ ] technical details
+  - [ ] difference image and container
+  - [ ] images bianry compatible
 - [ ] Jupyter notebook example
 - [ ] GUIs and X
 - [ ] Creating Containers
