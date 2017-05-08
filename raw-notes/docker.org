@@ -149,20 +149,23 @@ See
 
 * Training
 ** basic example
-- basic example, run cowsay in docker
-- basic example with mounting directory
+- [X] basic example, run cowsay in docker
+- [X] Build container
 
-
-** Build container
 ** Use container
+- [X] exporting and importing containers
+- [X] basic example with mounting directory
 ** Common use cases in building containers
 - add files
 - set environment variables
-- change working directory
+- [X] change working directory
 
-** exporting and importing containers
 ** using dockerhub
 ** exporting X
+- ssh into container?
+
+** sharing a port
+
 
 * Sharing X
 - firefox example on linux:

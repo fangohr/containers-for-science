@@ -1,19 +1,23 @@
 - [X] Introduction
-- [ ] More realistic example
-  - demo non-persistence
-  - mount directory
-  - open port
-- [ ] machine maintenance
+- [-] More realistic example [2/3]
+  - [X] demo non-persistence
+  - [X] mount directory
+  - [ ] open port
+- [ ] machine maintenance [/]
   - [ ] where are images?
   - [ ] how to remove all images?
-- [ ] technical details
+- [ ] technical details [/]
   - [ ] difference image and container
   - [ ] images bianry compatible
 - [ ] Jupyter notebook example
 - [ ] GUIs and X
-- [ ] Creating Containers
+- [X] Creating Containers
   - Dockerfile
   - images to base on
 
 - [ ] Using containers in Travis / Circle CI
 - [ ] Performance study
+
+- [ ] Introduce singularity
+- [ ] translate examples above into singularity
+- [ ] Motivate use of containers
