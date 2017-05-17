@@ -7,7 +7,6 @@
 ((* block header *))
 ((( super() )))
 \usepackage{amssymb}% for numbers/numbers
-\usepackage{amsmath} % NSOB.  For SymPy chapter (LaTeX-output section)
 \usepackage{sectsty}
 \allsectionsfont{\sffamily}
 
@@ -75,17 +74,17 @@
 
 \title{
 \sffamily Introduction to \\[0.5cm]
-\textbf{\huge Python for Computational Science and Engineering}\\[0.5cm]
+\textbf{\huge Containers for Science}\\[0.5cm]
 (A beginner's guide to Python~3)}
 
 \author{
 % \centerline{\Oldincludegraphics[width=0.4\textwidth]{images/mayavi-samp.png}}\\[1cm]
 \sffamily Hans Fangohr \\
-\sffamily Faculty of Engineering and the Environment\\
+\sffamily European XFEL GmbH\\
 \sffamily University of Southampton}
 \date{ \sffamily \today }
 \maketitle
-\newpage
+%\newpage
 \tableofcontents
 \newpage
 ((* endblock predoc *))
