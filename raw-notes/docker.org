@@ -165,6 +165,7 @@ See
 - ssh into container?
 
 ** sharing a port
+- [X] http.server
 
 
 * Sharing X
