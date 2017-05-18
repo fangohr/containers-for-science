@@ -73,16 +73,14 @@
 ((* block predoc *))
 
 \title{
-\sffamily Introduction to \\[0.5cm]
-\textbf{\huge Containers for Science}\\[0.5cm]
-(A beginner's guide to Python~3)}
+Introduction to Containers for Science\\[0.5cm]}
 
 \author{
 % \centerline{\Oldincludegraphics[width=0.4\textwidth]{images/mayavi-samp.png}}\\[1cm]
-\sffamily Hans Fangohr \\
-\sffamily European XFEL GmbH\\
-\sffamily University of Southampton}
-\date{ \sffamily \today }
+Hans Fangohr \\
+European XFEL GmbH\\
+University of Southampton}
+\date{ \today }
 \maketitle
 %\newpage
 \tableofcontents
