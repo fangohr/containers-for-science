@@ -16,3 +16,15 @@ html: notebooks/*.ipynb
 	date > html/last-updated.txt
 
 all: html pdf
+
+test-pdf:
+	make pdf
+
+test-html:
+	make html
+
+test-all:
+	make test
+	make html
+	make pdf
+	

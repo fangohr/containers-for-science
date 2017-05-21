@@ -17,3 +17,5 @@ test:
   pre:
   override:
     - make test
+    - make test-html
+    - make test-pdf
