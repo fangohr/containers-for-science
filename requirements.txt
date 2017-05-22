@@ -1,5 +1,4 @@
 notebook
 pytest
+bookbook
 nbval
-flit
-# bookbook   ; might need from source
