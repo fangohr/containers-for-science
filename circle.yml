@@ -16,6 +16,5 @@ dependencies:
 test:
   pre:
   override:
-    - make test
-    - make test-html
-    - make test-pdf
+    - make docker-build
+    - make run-test-in-container

@@ -32,3 +32,14 @@ test-all:
 	make test-html
 	@# test building of pdf output
 	make test-pdf
+
+
+# to run builds and tests in Container
+
+docker-build:
+	docker build -t containers-for-science .
+
+run-test-in-container:
+	docker run -v `pwd`:/io containers-for-science make test-html
+	docker run -v `pwd`:/io containers-for-science make test-pdf
+	docker run -v `pwd`:/io containers-for-science make test
