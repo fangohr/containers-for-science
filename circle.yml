@@ -7,11 +7,6 @@ machine:
 dependencies:
   override:
     - docker info
-    #- sudo apt-get -q update -y
-    #- pip install -U pip
-    #- pip install -r requirements.txt
-    #- pip install pandocfilters
-    # - pip install bookbook
 
 test:
   pre:
