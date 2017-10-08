@@ -1,2 +1,6 @@
 .ipynb_checkpoints
 .cache
+notebooks/__pycache__/
+notebooks/cow-input.txt
+notebooks/cow-output.txt
+notebooks/hello.txt
