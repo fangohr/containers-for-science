@@ -13,4 +13,4 @@ test:
   pre:
   override:
     - make docker-build
-    - make run-test-in-container
+    - make docker-test

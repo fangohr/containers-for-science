@@ -39,7 +39,7 @@ test-all:
 docker-build:
 	docker build -t containers-for-science .
 
-run-test-in-container:
+docker-test:
 	@# build container first - null operation if already done
 	make docker-build
 	@# run actual tests in container
