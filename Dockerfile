@@ -1,5 +1,5 @@
-FROM ubuntu:16.04
-
+FROM ubuntu:18.04
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update -y
 RUN apt-get install -y python3 python3-dev git pandoc
 
