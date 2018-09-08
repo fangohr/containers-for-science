@@ -1,13 +1,6 @@
 FROM ubuntu:18.04
 ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get update -y
-RUN apt-get install -y python3 python3-dev git pandoc
-
-# This is a big package to install. The missing executable was 'xelatex':
-RUN apt-get install -y pandoc texlive-xetex
-
-# Also need pip
-RUN apt-get install -y python3-pip
+RUN apt-get update -y && apt-get install -y python3 python3-dev git pandoc pandoc texlive-xetex python3-pip && rm -rf /var/lib/apt/lists/*
 RUN mkdir -p /opt/install
 
 # install packages from requirements.txt file
