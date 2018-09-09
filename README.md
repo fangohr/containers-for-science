@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/fangohr/containers-for-science.svg?style=svg&circle-token=b7e063ee947d5b696f8152f6137f21f7154e3bb6)](https://circleci.com/gh/fangohr/containers-for-science)
+[![Build Status](https://travis-ci.org/fangohr/containers-for-science.svg?branch=master)](https://travis-ci.org/fangohr/containers-for-science)
 
 # Containers for science
 
@@ -17,4 +17,3 @@ The subdirectory `notebooks` contains one Jupyter Notebook per chapter. (Useful 
 # Disclaimer
 
 I hope the document will grow a little bit.
-
