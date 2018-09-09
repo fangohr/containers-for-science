@@ -73,4 +73,5 @@ RUN ln -s /usr/bin/mktexlsr /usr/bin/mktexlsr.pl
 
 
 # Offer bash by default
-CMD ["/bin/bash"]
+CMD ["/usr/local/bin/dockerd-entrypoint.sh"]
+# CMD ["/bin/bash"]
