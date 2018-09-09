@@ -43,16 +43,11 @@ docker-test:
 	@# build container first - null operation if already done
 	make docker-build
 	@# run actual tests in container
-	docker run -v `pwd`:/io containers-for-science make test-html
-	docker run -v `pwd`:/io containers-for-science make test-pdf
-	docker run -v `pwd`:/io containers-for-science make test
+	docker container run --rm  -v `pwd`:/io containers-for-science make test-html
+	docker container run --rm  -v `pwd`:/io containers-for-science make test-pdf
+	docker container run --rm  -v `pwd`:/io containers-for-science make test
 
 docker-pdf:
 	@# build container first - null operation if already done
 	make docker-build
-	docker run -v `pwd`:/io containers-for-science make pdf
-
-docker-pdf:
-	@# build container first - null operation if already done
-	make docker-build
-	docker run -v `pwd`:/io containers-for-science make html
+	docker container run --rm  -v `pwd`:/io containers-for-science make html
