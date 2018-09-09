@@ -11798,7 +11798,7 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">file</span> Dockerfile
-FROM ubuntu:16.04
+FROM ubuntu:latest
 
 RUN apt-get update 
 RUN apt-get install -y cowsay
@@ -11859,19 +11859,103 @@ RUN ln -s /usr/games/cowsay /usr/local/bin
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Sending build context to Docker daemon 124.4 kB
-Step 1/4 : FROM ubuntu:16.04
- ---&gt; 0ef2e08ed3fa
+<pre>Sending build context to Docker daemon    150kB
+Step 1/4 : FROM ubuntu:latest
+ ---&gt; cd6d8154f1e1
 Step 2/4 : RUN apt-get update
- ---&gt; Using cache
- ---&gt; 64d0cc85e4a4
+ ---&gt; Running in 94ff97dc933d
+Get:1 http://archive.ubuntu.com/ubuntu bionic InRelease [242 kB]
+Get:2 http://archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:3 http://archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Get:4 http://security.ubuntu.com/ubuntu bionic-security InRelease [83.2 kB]
+Get:5 http://archive.ubuntu.com/ubuntu bionic/universe Sources [11.5 MB]
+Get:6 http://security.ubuntu.com/ubuntu bionic-security/universe Sources [17.4 kB]
+Get:7 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [203 kB]
+Get:8 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [1363 B]
+Get:9 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [69.0 kB]
+Get:10 http://archive.ubuntu.com/ubuntu bionic/main amd64 Packages [1344 kB]
+Get:11 http://archive.ubuntu.com/ubuntu bionic/multiverse amd64 Packages [186 kB]
+Get:12 http://archive.ubuntu.com/ubuntu bionic/universe amd64 Packages [11.3 MB]
+Get:13 http://archive.ubuntu.com/ubuntu bionic/restricted amd64 Packages [13.5 kB]
+Get:14 http://archive.ubuntu.com/ubuntu bionic-updates/universe Sources [70.4 kB]
+Get:15 http://archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [226 kB]
+Get:16 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [401 kB]
+Get:17 http://archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [3925 B]
+Get:18 http://archive.ubuntu.com/ubuntu bionic-backports/universe amd64 Packages [2807 B]
+Fetched 25.9 MB in 4s (6374 kB/s)
+Reading package lists...
+Removing intermediate container 94ff97dc933d
+ ---&gt; 864c48282361
 Step 3/4 : RUN apt-get install -y cowsay
- ---&gt; Using cache
- ---&gt; e4fb0aeee30a
+ ---&gt; Running in 74d8be92f3c3
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libgdbm-compat4 libgdbm5 libperl5.26 libtext-charwidth-perl netbase perl
+  perl-modules-5.26
+Suggested packages:
+  filters cowsay-off gdbm-l10n perl-doc libterm-readline-gnu-perl
+  | libterm-readline-perl-perl make
+The following NEW packages will be installed:
+  cowsay libgdbm-compat4 libgdbm5 libperl5.26 libtext-charwidth-perl netbase
+  perl perl-modules-5.26
+0 upgraded, 8 newly installed, 0 to remove and 1 not upgraded.
+Need to get 6567 kB of archives.
+After this operation, 41.7 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 perl-modules-5.26 all 5.26.1-6ubuntu0.2 [2762 kB]
+Get:2 http://archive.ubuntu.com/ubuntu bionic/main amd64 libgdbm5 amd64 1.14.1-6 [26.0 kB]
+Get:3 http://archive.ubuntu.com/ubuntu bionic/main amd64 libgdbm-compat4 amd64 1.14.1-6 [6084 B]
+Get:4 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libperl5.26 amd64 5.26.1-6ubuntu0.2 [3531 kB]
+Get:5 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 perl amd64 5.26.1-6ubuntu0.2 [201 kB]
+Get:6 http://archive.ubuntu.com/ubuntu bionic/main amd64 libtext-charwidth-perl amd64 0.04-7.1 [9492 B]
+Get:7 http://archive.ubuntu.com/ubuntu bionic/main amd64 netbase all 5.4 [12.7 kB]
+Get:8 http://archive.ubuntu.com/ubuntu bionic/universe amd64 cowsay all 3.03+dfsg2-4 [17.7 kB]
+<span class="ansi-red-intense-fg">debconf: delaying package configuration, since apt-utils is not installed
+</span>Fetched 6567 kB in 1s (7811 kB/s)
+Selecting previously unselected package perl-modules-5.26.
+(Reading database ... 4037 files and directories currently installed.)
+Preparing to unpack .../0-perl-modules-5.26_5.26.1-6ubuntu0.2_all.deb ...
+Unpacking perl-modules-5.26 (5.26.1-6ubuntu0.2) ...
+Selecting previously unselected package libgdbm5:amd64.
+Preparing to unpack .../1-libgdbm5_1.14.1-6_amd64.deb ...
+Unpacking libgdbm5:amd64 (1.14.1-6) ...
+Selecting previously unselected package libgdbm-compat4:amd64.
+Preparing to unpack .../2-libgdbm-compat4_1.14.1-6_amd64.deb ...
+Unpacking libgdbm-compat4:amd64 (1.14.1-6) ...
+Selecting previously unselected package libperl5.26:amd64.
+Preparing to unpack .../3-libperl5.26_5.26.1-6ubuntu0.2_amd64.deb ...
+Unpacking libperl5.26:amd64 (5.26.1-6ubuntu0.2) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../4-perl_5.26.1-6ubuntu0.2_amd64.deb ...
+Unpacking perl (5.26.1-6ubuntu0.2) ...
+Selecting previously unselected package libtext-charwidth-perl.
+Preparing to unpack .../5-libtext-charwidth-perl_0.04-7.1_amd64.deb ...
+Unpacking libtext-charwidth-perl (0.04-7.1) ...
+Selecting previously unselected package netbase.
+Preparing to unpack .../6-netbase_5.4_all.deb ...
+Unpacking netbase (5.4) ...
+Selecting previously unselected package cowsay.
+Preparing to unpack .../7-cowsay_3.03+dfsg2-4_all.deb ...
+Unpacking cowsay (3.03+dfsg2-4) ...
+Setting up perl-modules-5.26 (5.26.1-6ubuntu0.2) ...
+Setting up libgdbm5:amd64 (1.14.1-6) ...
+Processing triggers for libc-bin (2.27-3ubuntu1) ...
+Setting up libtext-charwidth-perl (0.04-7.1) ...
+Setting up libgdbm-compat4:amd64 (1.14.1-6) ...
+Setting up netbase (5.4) ...
+Setting up libperl5.26:amd64 (5.26.1-6ubuntu0.2) ...
+Setting up perl (5.26.1-6ubuntu0.2) ...
+Setting up cowsay (3.03+dfsg2-4) ...
+Processing triggers for libc-bin (2.27-3ubuntu1) ...
+Removing intermediate container 74d8be92f3c3
+ ---&gt; 951b8495700a
 Step 4/4 : RUN ln -s /usr/games/cowsay /usr/local/bin
- ---&gt; Using cache
- ---&gt; 78da9d9c6dbd
-Successfully built 78da9d9c6dbd
+ ---&gt; Running in 7e1aeea049be
+Removing intermediate container 7e1aeea049be
+ ---&gt; 532aedd4e4e6
+Successfully built 532aedd4e4e6
+Successfully tagged cowimage:latest
 </pre>
 </div>
 </div>
@@ -11970,7 +12054,7 @@ Successfully built 78da9d9c6dbd
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>-rw-r--r--  1 fangohr  staff   211M 18 May 16:14 cowimage.tar
+<pre>-rw-r--r--  1 fangohr  staff   163M Sep  8 21:36 cowimage.tar
 </pre>
 </div>
 </div>
@@ -12022,7 +12106,7 @@ Successfully built 78da9d9c6dbd
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>-rw-r--r--  1 fangohr  staff    88M 18 May 16:14 cowimage.tar.gz
+<pre>-rw-r--r--  1 fangohr  staff    69M Sep  8 21:36 cowimage.tar.gz
 </pre>
 </div>
 </div>

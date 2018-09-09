@@ -11823,8 +11823,8 @@ div#notebook {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>latest: Pulling from library/ubuntu
-Digest: sha256:382452f82a8bbd34443b2c727650af46aced0f94a44463c62a9848133ecb1aa8
-Status: Image is up to date for ubuntu:latest
+Digest: sha256:de774a3145f7ca4f0bd144c7d4ffb2931e06634f11529653b23eba85aef8e378
+Status: Downloaded newer image for ubuntu:latest
 </pre>
 </div>
 </div>
@@ -11863,7 +11863,7 @@ Status: Image is up to date for ubuntu:latest
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Ubuntu 16.04.2 LTS \n \l
+<pre>Ubuntu 18.04.1 LTS \n \l
 
 </pre>
 </div>
@@ -11920,6 +11920,46 @@ Status: Image is up to date for ubuntu:latest
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Hello World
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We have just executed the "echo 'Hello World'" command inside the Ubuntu Linux distribution container! We can check how large the image of the container is:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>docker images ubuntu:latest
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              latest              cd6d8154f1e1        2 days ago          84.1MB
 </pre>
 </div>
 </div>
