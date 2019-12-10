@@ -14,6 +14,10 @@ The subdirectory `html` contains a html version of the document.
 
 The subdirectory `notebooks` contains one Jupyter Notebook per chapter. (Useful to step through the examples interactively.)
 
-# Disclaimer
+# Work in progress
 
-I hope the document will grow a little bit.
+12/2019:
+
+- there is a [mybinder branch](https://github.com/fangohr/containers-for-science/tree/mybinder) which aims to allow execution of these notebooks on binder. Not quite finished yet (contributions welcome)
+
+- would be nice to have a similar introduction to Singularity containers
